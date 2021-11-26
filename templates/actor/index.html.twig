@@ -3,15 +3,17 @@
 {% block title %}Liste des acteurs{% endblock %}
 
 {% block body %}
-<table>
+<div class="container">
     {% for actor in actors %}
+    <table>
     <tr>
        <td> {{actor.prenom}} {{ actor.nom }}</td>
         <td><a href="{{path('afficheactor',{'id':actor.id}) }}"><img src ="{{asset('images/'~actor.photo)}}"></a></td>
         <td><a href="{{path('modifieractor',{'id':actor.id})}}">Modifier</a></td>
         
     </tr>
+    </table>
     {% endfor %}
-</table>
+</div>
 
 {% endblock %}

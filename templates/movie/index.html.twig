@@ -3,13 +3,15 @@
 {% block title %}Liste des films{% endblock %}
 
 {% block body %}
-<table>
+<div class="container">
 
     {% for movie in movies %}
+    <table>
     <tr>
         <td>{{ movie.titre }}</td><td><a href="{{path('affichecasting',{'id':movie.id}) }}"><img src ="{{asset('affiches/'~movie.affiche)}}"></a></td>
     </tr>
+    </table>
     {% endfor %}
 
-</table>
+</div>
 {% endblock %}
