@@ -12,8 +12,33 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+        <style>
+        table {width:30%; margin: 0 auto; border-collapse: separate; border-spacing: 5px}
+        </style>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{path('actor')}}">Acteurs présents</a>
+            <a class="navbar-brand" href="{{path('creationactor')}}">Ajouter un acteur</a>
+            <a class="navbar-brand" href="{{path('movie')}}">Films</a>
+            <a class="navbar-brand" href="{{path('ajouterfilm')}}">Ajouter un film</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{path('actor')}}">Accueil </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1 class="border border-dark rounded p-2 m-2 text-white bg-primary">{% block Cinesite %}{% endblock %}</h1>
         {% block body %}{% endblock %}
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     
     </body>
 </html>

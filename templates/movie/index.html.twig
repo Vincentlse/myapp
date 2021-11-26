@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+<table>
+
+    {% for movie in movies %}
+    <tr>
+        <td>{{ movie.titre }}</td><td><a href="{{path('affichecasting',{'id':movie.id}) }}"><img src ="{{asset('affiches/'~movie.affiche)}}"></a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des réalisateurs{% endblock %}
+
+{% block body %}
+
+{% for director in directors %}
+        {{ director.nom }}
+    {% endfor %}
+
+{% endblock %}

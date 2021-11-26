@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Casting du film{% endblock %}
+
+{% block body %}
+
+<img src ="{{asset('affiches/'~movie.affiche)}}">
+
+<table>
+    
+    {% for actor in movie.acteurs %}
+    <tr>
+        <td>{{ actor.prenom }}</td><td>{{actor.nom}}</td><td><img src ="{{asset('images/'~actor.photo)}}"></td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

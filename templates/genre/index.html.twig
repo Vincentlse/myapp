@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des genres{% endblock %}
+
+{% block body %}
+
+{% for genre in genres %}
+        {{ genre.genre }}
+    {% endfor %}
+
+{% endblock %}

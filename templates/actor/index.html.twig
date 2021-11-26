@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des acteurs{% endblock %}
+
+{% block body %}
+<table>
+    {% for actor in actors %}
+    <tr>
+       <td> {{actor.prenom}} {{ actor.nom }}</td>
+        <td><a href="{{path('afficheactor',{'id':actor.id}) }}"><img src ="{{asset('images/'~actor.photo)}}"></a></td>
+        <td><a href="{{path('modifieractor',{'id':actor.id})}}">Modifier</a></td>
+        
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
