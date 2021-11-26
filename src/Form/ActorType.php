@@ -21,7 +21,8 @@ class ActorType extends AbstractType
                                                 'multiple'=>true,
                                                 'class'=> Movie::class,
                                                 'choice_label'=>'titre',
-                                                'label'=>'Choisir le(s) film(s)'])
+                                                'label'=>'Choisir le(s) film(s)'
+                                            ,'by_reference'=>false])
             
         ;
     }
